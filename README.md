@@ -111,9 +111,7 @@ AWS Config continuously monitors AWS resource configurations to ensure complianc
 
 ---
 
-## 8. Ph
-
-ased Migration Strategy
+## 8. Phased Migration Strategy
 
 ### 8.1. High-level Architecture Diagram
 Below is planning and assessment that we can do for GlobalTech Solutions:
