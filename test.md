@@ -44,9 +44,9 @@ The Rideau Canal Skateway Monitoring System is structured as follows:
 
 ---
 
-## Implementation Details
+# Implementation Details
 
-#### 1. IoT Sensor Simulation
+### 1. IoT Sensor Simulation
 
 The **IoT Sensor Simulation** generates JSON payloads every 10 seconds. Each payload includes the following attributes:
 
@@ -59,7 +59,7 @@ The **IoT Sensor Simulation** generates JSON payloads every 10 seconds. Each pay
 | `externalTemperature` | Ambient temperature in Celsius.           |
 | `timestamp`        | UTC timestamp of the data.                  |
 
-#### Example JSON Payload
+### Example JSON Payload
 
 ```json
 {
@@ -79,7 +79,7 @@ The **IoT Sensor Simulation** generates JSON payloads every 10 seconds. Each pay
 
 Before running the IoT sensor simulation scripts (`fifth_avenue.py`, `dows_lake.py`, `nac.py`), ensure Python is installed on your system. If Python is not installed, follow the steps below to install Python on a Linux system.
 
-#### Installing Python on Linux
+### Installing Python on Linux
 
 1. **Update the System**:
    - Open a terminal and update your package manager:
@@ -115,7 +115,7 @@ Before running the IoT sensor simulation scripts (`fifth_avenue.py`, `dows_lake.
 
 ---
 
-## Connecting Azure IoT Hub with Azure Stream Analytics to Process Streaming Data
+# Connecting Azure IoT Hub with Azure Stream Analytics to Process Streaming Data
 
 ---
 
@@ -161,7 +161,7 @@ pip install azure-iot-device
 
 Use the Python script below to simulate telemetry data for a sensor. Replace the `CONNECTION_STRING` with the connection string copied earlier.
 
-#### Python Script (Fifth Avenue Sensor)
+### Python Script (Fifth Avenue Sensor)
 
 ```python
 import time
@@ -330,7 +330,7 @@ GROUP BY
 
 ---
 
-### Configuring Azure Services
+## Configuring Azure Services
 
 1. **Set Up IoT Hub**:
    - Create an IoT Hub in the Azure Portal and register devices (`fifth_avenue`, `dows_lake`, `nac`).
@@ -361,7 +361,7 @@ Tumblingwindow(second , 60)
 
 ---
 
-### Accessing Stored Data
+## Accessing Stored Data
 
 1. **View Processed Data in Blob Storage**:
    - Open the Blob Storage account in the Azure Portal.
@@ -380,7 +380,7 @@ Tumblingwindow(second , 60)
 
 ---
 
-### Challenges Faced
+## Challenges Faced
 
 1. **Data Synchronization**:
    - Ensuring consistent timestamps across simulated sensors was complex.
