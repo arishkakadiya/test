@@ -242,6 +242,47 @@ We will be prepared for unexpected events by enabling Amazon S3 Cross-Region Rep
 ## 11. Cost Estimation
 We used the AWS Pricing Calculator to estimate the budget to migrate to AWS.
 
+# AWS Cost Estimation Report
+
+| **Category**              | **AWS Service**                | **Estimated Units/Resources**              | **Purpose**                                             | **Cost in USD/month** |
+|---------------------------|--------------------------------|-------------------------------------------|-------------------------------------------------------|-----------------------|
+| **Compute**               | Amazon EC2                    | 150 instances (t3.medium)                | Rehosting 150 VMs (Windows and Linux).                | 4270.50              |
+|                           | Amazon ECS/EKS                | 10 clusters                              | Running containerized ERP components and modernized apps. | 112.40               |
+|                           | AWS Lambda                    | 5 million requests/month                 | Refactored serverless functions for ERP and e-commerce apps. | 20.00                   |
+|                           | AWS Fargate                   | 500 vCPU hours/month                     | Serverless containers for microservices.             | 25.00                   |
+| **Storage**               | Amazon S3                     | 50 TB/month                              | Storage for migrated files and backups.              | 1177.60              |
+|                           | Amazon EFS                    | 10 TB/month                              | Shared file storage for Linux applications.          | 301.10               |
+|                           | Amazon FSx for Windows        | 5 TB/month                               | File storage for Windows-based apps.                 | 252.30               |
+|                           | Amazon S3 Glacier             | 10 TB/month                              | Archival storage for legacy data.                    | 40.30                |
+| **Databases**             | Amazon RDS                    | 5 instances (db.t3.medium)               | For ERP and other SQL workloads.                     | 1455.50              |
+|                           | Amazon Aurora                 | 2 clusters (db.r6g.large)                | High-performance databases for modernized workloads. | 1210.80              |
+|                           | Amazon DynamoDB               | 1,000 read/write capacity units          | NoSQL database for new application components.       | 282.14               |
+|                           | Amazon ElastiCache            | 50 GB/month                              | In-memory caching for improved application performance. | 75.00                   |
+| **Migration**             | AWS Application Migration Service | 150 VMs                              | Migrating VMs from on-premises to AWS.               | 0 (included in EC2 costs) |
+|                           | AWS Database Migration Service | 2 migrations                            | Migrating SQL databases with minimal downtime.       | 129.58               |
+|                           | AWS DataSync                  | 50 TB transferred                        | Moving large datasets to S3 or EFS.                  | 640.00                  |
+|                           | AWS Snowball                  | 1 device (50 TB)                         | Bulk data transfer from on-premises.                 | 1250.00              |
+| **Networking**            | Amazon VPC                    | 1 VPC                                    | Isolated cloud network for AWS resources.            | 0.00                    |
+|                           | Elastic Load Balancing        | 5 load balancers                         | Distributing traffic for e-commerce apps and ERP.    | 184.33               |
+|                           | Amazon CloudFront             | 10 TB/month                              | Content delivery for global users.                   | 870.40               |
+| **Security & Compliance** | AWS IAM                       | Unlimited                                | Role-based access control.                           | 0.00                    |
+|                           | AWS KMS                       | 1,000 keys                               | Encryption for sensitive data.                       | 1000.06              |
+|                           | AWS Secrets Manager           | 50 secrets                               | Managing application secrets like API keys.          | 20.00                   |
+|                           | AWS WAF                       | 2 web ACLs                               | Protecting e-commerce applications from attacks.     | 60.00                   |
+| **Monitoring & Management** | Amazon CloudWatch            | 1000 metrics/month                       | Monitoring resource utilization and performance.      | 300.00                  |
+|                           | AWS Trusted Advisor           | 1 account                                | Recommendations for cost and performance optimization. | 0.00                   |
+|                           | AWS Config                    | 500 rules/month                          | Continuous compliance checks.                        | 250.00                  |
+| **Legacy Modernization**  | AWS Mainframe Modernization   | 1 runtime environment                    | Rehosting the legacy mainframe.                      | 99.20                |
+|                           | AWS Batch                     | 10,000 jobs/month                        | Running batch jobs for payroll and reporting.        | 50.00                   |
+|                           | Amazon SQS                    | 1,000,000 messages/month                 | Decoupling components in the modernized architecture. | 5.00                    |
+|                           | Amazon EventBridge            | 500,000 events/month                     | Event-driven communication between modernized components. | 5.00                    |
+| **Backup & Recovery**     | AWS Backup                    | 50 TB/month                              | Centralized backups for critical systems.            | 250.00                  |
+|                           | Elastic Disaster Recovery     | 10 servers                               | Disaster recovery for critical workloads.            | 200.00                  |
+
+### Migration Cost: **$2019.58**  
+### Operational Cost: **$12969.93/Month**
+
+
 ---
 
 ## 12. Conclusion
