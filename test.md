@@ -14,7 +14,7 @@ This project leverages **Azure IoT Hub**, **Azure Stream Analytics**, and **Azur
 
 ---
 
-## System Architecture
+# System Architecture
 
 The Rideau Canal Skateway Monitoring System is structured as follows:
 
@@ -38,7 +38,7 @@ The Rideau Canal Skateway Monitoring System is structured as follows:
 4. **Azure Blob Storage**:
    - Stores aggregated data in a structured format for further analysis and historical recordkeeping.
 
-### System Diagram
+## System Diagram
 
 ![System Architecture](screenshots/system-architecture-diagram.png)
 
@@ -46,7 +46,7 @@ The Rideau Canal Skateway Monitoring System is structured as follows:
 
 ## Implementation Details
 
-### 1. IoT Sensor Simulation
+#### 1. IoT Sensor Simulation
 
 The **IoT Sensor Simulation** generates JSON payloads every 10 seconds. Each payload includes the following attributes:
 
