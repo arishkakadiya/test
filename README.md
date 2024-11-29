@@ -116,6 +116,8 @@ AWS Config continuously monitors AWS resource configurations to ensure complianc
 ### 8.1. High-level Architecture Diagram
 Below is planning and assessment that we can do for GlobalTech Solutions:
 
+![project drawio (3)](https://github.com/user-attachments/assets/8ebe38c0-c84e-4dc0-b4da-4c270cbd582c)
+
 #### **Phase 1. Assessment**
 - **Inventory Current Systems**:  
   We can begin by cataloging all servers, applications, and databases for the GlobalTech Solutions. Tools like AWS Application Discovery Service can provide a detailed understanding of system dependencies, configurations, and resource utilization, forming a comprehensive baseline for migration. We will use AWS Migration Hub to analyze the current on-premises environment.
