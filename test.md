@@ -40,17 +40,7 @@ The Rideau Canal Skateway Monitoring System is structured as follows:
 
 ## System Diagram
 
-```mermaid
-graph TD
-    subgraph IoT Sensors
-        A[Dow's Lake] --> B[Azure IoT Hub]
-        C[Fifth Avenue] --> B
-        D[NAC] --> B
-    end
-    
-    B --> E[Azure Stream Analytics]
-    E --> F[Azure Blob Storage]
-```
+<img width="435" alt="Screenshot 2024-11-29 at 8 12 27 PM" src="https://github.com/user-attachments/assets/c89d2149-71e4-4994-9e9e-60b574bd097d">
 ---
 
 # Implementation Details
